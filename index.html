@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Niccolò Lucozzi</title>
+    <meta name="description" content="Niccolò Lucozzi Portfolio">
+    <meta name="author" content="Niccolò Lucozzi">
+    <meta name="keywords" content="Niccolò Lucozzi, niccolò lucozzi, lucozzi, angular, html, css, NodeJS, fiverr">
+</head>
+<body>
+    <div class="container">
+        <section id="landingPage">
+            <div class="content">
+                <img src="/assets/firma_bianca.png" alt="">
+                <h1>Hello 👋,</h1>
+                <h2>I'm a Programmer, student and computer enthusiast</h2>
+                <h3>Reach me at <a class="email" href="mailto:lucozzilavoro@gmail.com">lucozzilavoro@gmail.com</a></h3>
+                <div class="navbutton">
+                    <a class="button" href="#skillset">Skills</a>
+                    <a class="button" href="#projects">Projects</a>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#skillset">
+                    <img src="/assets/icons8-freccia-espandi-50.png" alt="">
+                </a>
+                
+            </div>
+        </section>
+
+        <section id="skillset">
+            <div class="content">
+                <h1>My Skillset</h1>
+                <h2>These are the tools that i have used throughout the years</h2>
+                <div class="grid">
+                    <div class="one">
+                        <img src="/assets/angular.png" alt="">
+                        <h2>Angular</h2>
+                        <p>Dynamic interfaces and responsive website</p>
+                    </div>
+
+                    <div class="two">
+                        <img src="/assets/nodejs.png" alt="">
+                        <h2>NodeJS</h2>
+                        <p>Backend and REST APIs</p>
+                    </div>
+
+                    <div class="three">
+                        <img src="/assets/reactnative.png" alt="">
+                        <h2>React Native</h2>
+                        <p>Crossplatform Mobile Apps</p>
+                    </div>
+
+                    <div class="four">
+                        <img src="/assets/ios.png" alt="">
+                        <h2>iOS - Swift</h2>
+                        <p>Desktop and Mobile apps on Apple devices</p>
+                    </div>
+
+                    <div class="five">
+                        <img src="/assets/php.png" alt="">
+                        <h2>PHP</h2>
+                        <p>Serverless website using PHP scripts</p>
+
+                    </div>
+
+                    <div class="six">
+                        <img src="/assets/javascript.png" alt="">
+                        <h2>Javascript</h2>
+                        <p>Web development using JS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#projects">
+                    <img src="/assets/icons8-freccia-espandi-50.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section id="projects">
+
+            <div class="content">
+                <h1>My Projects</h1>
+                <h2>These are the public projects that i have released on Github</h2>
+                <a class="button" href="https://github.com/NikLucoz">View Github</a>
+                <div class="grid">
+                    <div class="one">
+                        <img src="/assets/covidadvisor.png" alt="">
+                        <a target="_blank" href="https://github.com/NikLucoz/CovidAdvisor"><h2>Covid Advisor</h2></a>
+                        <p>Open-Source App developed in React Native that shows Italian Covid19 data.</p>
+                    </div>
+
+                    <div class="two">
+                        <img src="/assets/market.png" alt="">
+                        <a target="_blank" href="https://github.com/NikLucoz/market"><h2>Market</h2></a>
+                        <p>Backend and REST APIs</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="footer">
+                <a href="#landingPage">
+                    <img src="/assets/icons8-freccia-espandi-50.png" alt="">
+                </a>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        })
+    </script>
+</body>
+</html>
+<!-- MADE BY Niccolò Lucozzi -->
