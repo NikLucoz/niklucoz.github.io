@@ -387,6 +387,11 @@ body .container section:nth-of-type(3) .footer img {
         color: white;
         overflow-y: scroll;
     }
+
+
+    body .container section .footer a {
+        margin-bottom: 40px;
+    }
 }
 
 @media only screen and (min-device-width : 500px) and (max-device-width : 1000px) {
