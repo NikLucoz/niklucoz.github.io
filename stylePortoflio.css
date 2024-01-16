@@ -1,0 +1,42 @@
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+    position: relative;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(202, 202, 202, 0.5);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(202, 202, 202, 1);
+}
+
+@font-face {
+    font-family: SignFont;
+    src: url(./assets/Sign\ Style\ DEMO.ttf);
+}
+
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Poppins'
+}
+
+*{
+    scroll-behavior: smooth;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niccolò Lucozzi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/draggable.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css@0.2.3/dist/98.css" />
+</head>
+<body class="bg-[url('https://cdn.wallpapersafari.com/27/34/gecy2p.jpg')] flex flex-col items-center h-screen">
+    <div class="start-bar flex flex-row items-center pr-2 gap-2">
+		<a href="/" title="Start Menu" class="border border-t-grey-500 border-l-grey-500  border-r-black border-b-black p-1">
+			<img src="https://win98icons.alexmeub.com/images/start-button.png" alt="">
+		</a>
+	</div>
+    <div class="w-full h-full text-gray-400">
+        <div class="w-1/12 h-full flex flex-col items-center pt-10 gap-2">
+            <a class="h-[70px] w-[70px] flex flex-col justify-center items-center hover:border border-gray-500 border-dotted" onclick="return toggleWelcome()">
+                <img src="https://win98icons.alexmeub.com/icons/png/computer-4.png" alt="sus" width="30" height="30">
+                <p>Questo PC</p>
+            </a>
+            <a class="h-[70px] w-[70px] flex flex-col justify-center items-center hover:border border-gray-500 border-dotted" onclick="return toggleAllExporer()">
+                <img src="https://win98icons.alexmeub.com/icons/png/msie1-2.png" alt="sus" width="30" height="30">
+                <p>Internet</p>
+            </a>
+            <a class="h-[70px] w-[70px] flex flex-col justify-center items-center hover:border border-gray-500 border-dotted" onclick='return toggleProjects()'>
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-5.png" alt="sus" width="30" height="30">
+                <p>Progetti</p>
+            </a>
+            <a class="h-[70px] w-[70px] flex flex-col justify-center items-center hover:border border-gray-500 border-dotted" onclick="return toggleCMD()">
+                <img src="https://win98icons.alexmeub.com/icons/png/console_prompt-0.png" alt="sus" width="30" height="30">
+                <p>CMD</p>
+            </a>
+            <a class="h-[70px] w-[70px] flex flex-col justify-center items-center hover:border border-gray-500 border-dotted" target="_blank" href="https://www.minecraft.com">
+                <img src="/img/minecraft.png" alt="sus" width="30" height="30">
+                <p>Minecraft</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="component terminale window" id="draggable">
+        <div class="title-bar">
+          <div class="title-bar-text">Command Prompt</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <pre>Microsoft&#10094;R&#10095; Windows DOS &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
+            <br>C:&#92;WINDOWS&#92;SYSTEM32> .\prova.exe
+          </pre>
+        </div>
+    </div>
+
+    <div class="component progetti window p-2 lg:w-[800px] w-[300px] h-[600px] min-h-[400px]" id="draggable">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Progetti
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="return toggleProjects()"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="return toggleProjects()"></button>
+              </div>
+        </div>
+        <div class="window-body">
+            <menu role="tablist" aria-label="Projects Tabs">
+                <button role="tab" aria-selected="true" aria-controls="tab-A">Web Development & Apps</button>
+                <button role="tab" aria-controls="tab-B">Game Design / Development</button>
+                <button role="tab" aria-controls="tab-C">Miscs</button>
+            </menu>
+
+            <article role="tabpanel" class="h-[520px] overflow-y-scroll" id="tab-A">
+
+                <fieldset class="p-2">
+                    <legend class="text-xl"> Midilane </legend>
+                    <img src="/img/midilanelogo.png" alt="midilane logo" width="80" height="80">
+                    <br>
+                    <p class="text-sm">Trova nuova musica con Midilane!</p>
+                    <p>Midilane è un semplice sito web dove puoi scoprire nuovi generi, canzoni e album con un semplice click</p>
+                </fieldset>
+
+                <fieldset class="p-2">
+                    <legend class="text-xl"> Fridge </legend>
+                    <img src="/img/fridgeicon.png" alt="fridge logo" width="80" height="80">
+                    <br>
+
+                    <p class="text-sm">Una semplice app per lo spreco alimentare</p>
+                    <p>Tramite Fridge potrai gestire al meglio i prodotti presenti nel tuo frigo e venire avvisato pochi giorni prima della loro scadenza! <br> <u><a class="text-sm" target="_blank" href="https://play.google.com/store/apps/details?id=com.niccololucozzi.Fridge">Link Play Store</a></u></p>
+                </fieldset>
+
+                <fieldset class="p-2">
+                    <legend class="text-xl"> Covid Advisor </legend>
+                    <img src="/img/codivadvisorlogo.png" alt="covid advisor logo" width="80" height="80">
+                    <br>
+                    <p>Rimani aggiornato sui dati del Covid-19 in Italia</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eum asperiores nemo molestias enim voluptatibus aliquam culpa blanditiis. Delectus dicta cum iure facere sequi sapiente recusandae nemo nisi ab numquam?</p>
+                </fieldset>
+            </article>
+    
+            <article role="tabpanel" class="min-h-[400px]" hidden id="tab-B">
+            <h3>More...</h3>
+            <p>This tab contains a GroupBox</p>
+            <fieldset>
+                <legend>Today's mood</legend>
+                <div class="field-row">
+                <input id="radio10" type="radio" name="fieldset-example2">
+                <label for="radio10">Claire Saffitz</label>
+                </div>
+                <div class="field-row">
+                <input id="radio11" type="radio" name="fieldset-example2">
+                <label for="radio11">Brad Leone</label>
+                </div>
+                <div class="field-row">
+                <input id="radio12" type="radio" name="fieldset-example2">
+                <label for="radio12">Chris Morocco</label>
+                </div>
+                <div class="field-row">
+                <input id="radio13" type="radio" name="fieldset-example2">
+                <label for="radio13">Carla Lalli Music</label>
+                </div>
+            </fieldset>
+            </article>
+            
+            <article role="tabpanel" class="min-h-[400px]" hidden id="tab-C">
+                <h3>Tab 3</h3>
+                <p>Lorem Ipsum Dolor Sit</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="component explorer window p-2 lg:w-[800px] w-[300px] h-[800px]" id="draggable">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Internet Explorer - Hoverbox
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="return toggleExplorer(this.parentElement.parentElement.parentElement)"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="return toggleExplorer(this.parentElement.parentElement.parentElement)"></button>
+              </div>
+        </div>
+        <div class="window-body">
+            <iframe src="https://hoverbox.cloud" class="w-full h-[740px]" title="Hoverbox"></iframe>
+        </div>
+    </div>
+
+    <div class="component explorer window p-2 lg:w-[800px] w-[300px] h-[800px]" id="draggable">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Internet Explorer - Video consigliato
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="return toggleExplorer(this.parentElement.parentElement.parentElement)"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="return toggleExplorer(this.parentElement.parentElement.parentElement)"></button>
+              </div>
+        </div>
+        <div class="window-body">
+            <iframe class="w-full h-[740px]" src="https://www.youtube.com/embed/hRz88FZ7Qzw?si=BlCnumoM8yL1PdOy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
+    </div>
+
+    <div class="component welcome window p-2 lg:w-[450px] w-[350px] absolute mt-5" id="draggable">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Benvenuto
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="return toggleWelcome()"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="return toggleWelcome()"></button>
+              </div>
+        </div>
+        <div class="window-body">
+            <p class="text-sm">Ciao! Io sono Niccolò Lucozzi, uno studente di informatica presso <br> <strong style="color: rgb(255, 0, 55)"><a target="_blank" href="https://www.unicam.it">✨ Unicam ✨</a></strong>.</p>
+            <p class="text-sm">Se non sai dove andare ti consiglio di vedere i miei <u>progetti!</u></p>
+            <br>
+            <p>Non fare caso al casino che c'è nel sito, è un po' come la mia testaaaa!</p>
+            <p class="text-sm">Se invece sei una persona importante allora aspetta un secondo che metto tutto in ordine... ... ... <a href="/portfolio.html">Eccoci, clicca qui!</a></p>
+            <p>Ti consiglio di chiudere le finestre che non ti interessano</p>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>
